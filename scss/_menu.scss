@@ -1,0 +1,70 @@
+.vacancy-menu {
+    margin-bottom: 16px;
+}
+
+.menu {
+    position: relative;
+    border-bottom: 1px solid var(--gray-400);
+
+    &__line {
+        all: unset;
+
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+
+        width: 150px;
+        height: 3px;
+
+        border-radius: 10px;
+
+        background-color: var(--orange-600);
+
+        transition: 0.3s ease-in-out;
+    }
+
+    &-list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        flex-wrap: wrap;
+        &__item {
+            cursor: pointer;
+            user-select: none;
+
+            padding: 20px 0;
+
+            color: var(--gray-800);
+
+            transition: 0.1s ease-in-out;
+
+            margin-right: 28px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                color: var(--gray-850);
+            }
+            &:active {
+                color: var(--gray-900);
+                transition: 0s;
+            }
+
+            &.active {
+                color: var(--orange-600);
+
+                &:hover {
+                    color: var(--orange-700);
+                }
+
+                &:active {
+                    color: var(--orange-800);
+                    transition: 0s;
+                }
+            }
+        }
+    }
+}

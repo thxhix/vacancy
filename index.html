@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>Вакансии</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="css/variables.css" />
+        <link rel="stylesheet" href="css/components.css" />
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <header></header>
+
+        <main class="wrapper">
+            <div class="container">
+                <aside class="sidebar text-s24-h32-w500"></aside>
+
+                <div class="vacancy">
+                    <div class="vacancy-header">
+                        <div class="vacancy-header__title text-s22-h28-w500">
+                            <h1>Вакансии</h1>
+                        </div>
+                        <div class="vacancy-header-action text-s14-h20-w500">
+                            <p class="button orange">
+                                <span class="button__icon">
+                                    <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.66634 1.6665L6.66634 12.3332M11.9997 6.99984L1.33301 6.99984" stroke="white" stroke-width="2" stroke-linecap="round" />
+                                    </svg>
+                                </span>
+                                Создать вакансию
+                            </p>
+
+                            <div class="vacancy-header-action-dropdown">
+                                <ul class="vacancy-header-action-dropdown-inner">
+                                    <li class="vacancy-header-action-dropdown-inner-item text-s14-h20-w500">
+                                        <div class="vacancy-header-action-dropdown-inner-item__icon">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.6667 2H3.33333C2.59695 2 2 2.59695 2 3.33333V12.6667C2 13.403 2.59695 14 3.33333 14H12.6667C13.403 14 14 13.403 14 12.6667V3.33333C14 2.59695 13.403 2 12.6667 2Z" stroke="#FFA438" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 5.3335V10.6668" stroke="#FFA438" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M5.33398 8H10.6673" stroke="#FFA438" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="vacancy-header-action-dropdown-inner-item__title">Новая вакансия</div>
+                                    </li>
+                                    <!--  -->
+                                    <li class="vacancy-header-action-dropdown-inner-item text-s14-h20-w500 modal-open-trigger" data-modal="template">
+                                        <div class="vacancy-header-action-dropdown-inner-item__icon">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.6667 2H3.33333C2.59695 2 2 2.59695 2 3.33333V12.6667C2 13.403 2.59695 14 3.33333 14H12.6667C13.403 14 14 13.403 14 12.6667V3.33333C14 2.59695 13.403 2 12.6667 2Z" stroke="#F78217" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M2 6H14" stroke="#F78217" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M6 14V6" stroke="#F78217" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="vacancy-header-action-dropdown-inner-item__title">Из шаблона</div>
+                                    </li>
+                                    <!--  -->
+                                    <li class="vacancy-header-action-dropdown-inner-item text-s14-h20-w500">
+                                        <div class="vacancy-header-action-dropdown-inner-item__icon">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.66602 8.66648C6.95232 9.04923 7.31759 9.36594 7.73705 9.59511C8.15651 9.82428 8.62035 9.96056 9.09712 9.9947C9.57388 10.0288 10.0524 9.96006 10.5002 9.793C10.9481 9.62594 11.3548 9.36453 11.6927 9.02648L13.6927 7.02648C14.2999 6.39781 14.6359 5.5558 14.6283 4.68181C14.6207 3.80782 14.2701 2.97178 13.6521 2.35375C13.0341 1.73573 12.198 1.38516 11.324 1.37757C10.45 1.36997 9.60802 1.70595 8.97935 2.31315L7.83268 3.45315" stroke="#FFA438" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M9.33347 7.33332C9.04716 6.95057 8.68189 6.63387 8.26243 6.40469C7.84297 6.17552 7.37913 6.03924 6.90237 6.0051C6.4256 5.97095 5.94707 6.03974 5.49924 6.2068C5.0514 6.37386 4.64472 6.63527 4.3068 6.97332L2.3068 8.97332C1.69961 9.60199 1.36363 10.444 1.37122 11.318C1.37881 12.192 1.72938 13.028 2.3474 13.646C2.96543 14.2641 3.80147 14.6146 4.67546 14.6222C5.54945 14.6298 6.39146 14.2938 7.02013 13.6867L8.16013 12.5467" stroke="#FFA438" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="vacancy-header-action-dropdown-inner-item__title">Новая вакансия</div>
+                                    </li>
+
+                                    <!--  -->
+                                    <li class="vacancy-header-action-dropdown-inner-item text-s14-h20-w500">
+                                        <div class="vacancy-header-action-dropdown-inner-item__icon">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.4794 7.57137L8.35273 13.698C7.60217 14.4486 6.58419 14.8703 5.52273 14.8703C4.46128 14.8703 3.44329 14.4486 2.69273 13.698C1.94217 12.9475 1.52051 11.9295 1.52051 10.868C1.52051 9.80658 1.94217 8.78859 2.69273 8.03803L8.8194 1.91137C9.31977 1.41099 9.99843 1.12988 10.7061 1.12988C11.4137 1.12988 12.0924 1.41099 12.5927 1.91137C13.0931 2.41174 13.3742 3.09039 13.3742 3.79803C13.3742 4.50567 13.0931 5.18432 12.5927 5.6847L6.4594 11.8114C6.20921 12.0616 5.86988 12.2021 5.51607 12.2021C5.16225 12.2021 4.82292 12.0616 4.57273 11.8114C4.32254 11.5612 4.18199 11.2219 4.18199 10.868C4.18199 10.5142 4.32254 10.1749 4.57273 9.9247L10.2327 4.27137" stroke="#FFA438" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="vacancy-header-action-dropdown-inner-item__title">Из файла</div>
+                                    </li>
+
+                                    <!--  -->
+                                    <li class="vacancy-header-action-dropdown-inner-item text-s14-h20-w500 modal-open-trigger" data-modal="draft">
+                                        <div class="vacancy-header-action-dropdown-inner-item__icon">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.29297 2.70703H2.6263C2.27268 2.70703 1.93354 2.84751 1.68349 3.09756C1.43344 3.3476 1.29297 3.68674 1.29297 4.04036V13.3737C1.29297 13.7273 1.43344 14.0665 1.68349 14.3165C1.93354 14.5666 2.27268 14.707 2.6263 14.707H11.9596C12.3133 14.707 12.6524 14.5666 12.9024 14.3165C13.1525 14.0665 13.293 13.7273 13.293 13.3737V8.70703" stroke="#FFA438" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M12.293 1.70718C12.5582 1.44197 12.9179 1.29297 13.293 1.29297C13.668 1.29297 14.0278 1.44197 14.293 1.70718C14.5582 1.9724 14.7072 2.33211 14.7072 2.70718C14.7072 3.08226 14.5582 3.44197 14.293 3.70718L7.95964 10.0405L5.29297 10.7072L5.95964 8.04052L12.293 1.70718Z" stroke="#FFA438" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="vacancy-header-action-dropdown-inner-item__title">Из черновика</div>
+                                    </li>
+                                    <!--  -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vacancy-menu">
+                        <div class="menu">
+                            <ul class="menu-list text-s16-h22-w500">
+                                <li class="menu-list__item active" data-tab="active">Активные</li>
+                                <li class="menu-list__item" data-tab="wait">Ждут действий</li>
+                                <li class="menu-list__item" data-tab="archive">Архив</li>
+                                <li class="menu-list__item" data-tab="draft">Черновики</li>
+                            </ul>
+                            <hr class="menu__line" />
+                        </div>
+                    </div>
+
+                    <div class="vacancy-tabs">
+                        <div class="vacancy-filter">
+                            <div class="mtFilter mtFilter--active">
+                                <div class="mtFilter-left">
+                                    <label class="mtFilter-checkbox">
+                                        <input type="checkbox" class="mtFilter-checkbox__input" />
+                                        <div class="mtFilter-checkbox__fake"></div>
+                                    </label>
+                                    <div class="mtFilter-left__buttons">
+                                        <div class="mtFilter-button disabled mtFilter-button--boost" data-action="boost">Продвинуть</div>
+                                        <div class="mtFilter-button disabled mtFilter-button--archive modal-open-trigger" data-modal="archive" data-action="to-archive">В архив</div>
+                                        <div class="mtFilter-button disabled mtFilter-button--activate" data-action="activate">Активировать</div>
+                                        <div class="mtFilter-button disabled mtFilter-button--transfer modal-open-trigger" data-modal="transfer" data-action="transfer">Передать</div>
+                                        <div class="mtFilter-button disabled mtFilter-button--delete" data-action="delete">Удалить</div>
+                                    </div>
+                                </div>
+
+                                <div class="mtFilter-right">
+                                    <label class="mtFilter-search">
+                                        <input type="search" class="mtFilter-search__input" placeholder="Название вакансии" />
+                                        <span class="mtFilter-search__icon"></span>
+                                    </label>
+
+                                    <div class="mtFilter-dropdown mtFilter-dropdown--user">
+                                        <div class="mtFilter-dropdown-input" data-user="Иван Иванов">
+                                            <span class="mtFilter-dropdown-input__value">Иван Иванов</span>
+
+                                            <div class="mtFilter-dropdown-input__icon">
+                                                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.75 3.9585L4.79289 7.00139C5.18342 7.39191 5.81658 7.39191 6.20711 7.00139L9.25 3.9585" stroke="#B6C2DA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="mtFilter-dropdown-menu">
+                                            <div class="mtFilter-dropdown-menu-item active" data-value="Иван Иванов">
+                                                <span class="mtFilter-dropdown-menu-item__icon">
+                                                    <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.08008 5.11892L4.28418 8.32298L11.1778 1.62354" stroke="#FFA438" stroke-width="1.66588" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                                <span class="mtFilter-dropdown-menu-item__value">
+                                                    Иван Иванов
+                                                </span>
+                                            </div>
+                                            <!--  -->
+                                            <div class="mtFilter-dropdown-menu-item" data-value="Елена Михайлова">
+                                                <span class="mtFilter-dropdown-menu-item__icon">
+                                                    <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.08008 5.11892L4.28418 8.32298L11.1778 1.62354" stroke="#FFA438" stroke-width="1.66588" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                                <span class="mtFilter-dropdown-menu-item__value">
+                                                    Елена Михайлова
+                                                </span>
+                                            </div>
+                                            <!--  -->
+                                            <div class="mtFilter-dropdown-menu-item" data-value="Дмитрий Александров">
+                                                <span class="mtFilter-dropdown-menu-item__icon">
+                                                    <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.08008 5.11892L4.28418 8.32298L11.1778 1.62354" stroke="#FFA438" stroke-width="1.66588" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                                <span class="mtFilter-dropdown-menu-item__value">
+                                                    Дмитрий Александров
+                                                </span>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+
+                                    <div class="mtFilter-dropdown mtFilter-dropdown--city">
+                                        <div class="mtFilter-dropdown-input" data-sort="Санкт-Петербург">
+                                            <div class="mtFilter-dropdown-input__value">Санкт-Петербург</div>
+                                            <div class="mtFilter-dropdown-input__icon">
+                                                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.75 3.9585L4.79289 7.00139C5.18342 7.39191 5.81658 7.39191 6.20711 7.00139L9.25 3.9585" stroke="#B6C2DA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="mtFilter-dropdown-menu">
+                                            <div class="mtFilter-dropdown-menu-item active" data-value="Санкт-Петербург">
+                                                <span class="mtFilter-dropdown-menu-item__icon">
+                                                    <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.08008 5.11892L4.28418 8.32298L11.1778 1.62354" stroke="#FFA438" stroke-width="1.66588" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                                <span class="mtFilter-dropdown-menu-item__value">
+                                                    Санкт-Петербург
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mtFilter-dropdown mtFilter-dropdown--sort">
+                                        <div class="mtFilter-dropdown-input" data-sort="По дате создания">
+                                            <div class="mtFilter-dropdown-input__value">По дате создания</div>
+                                            <div class="mtFilter-dropdown-input__icon">
+                                                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1.75 3.9585L4.79289 7.00139C5.18342 7.39191 5.81658 7.39191 6.20711 7.00139L9.25 3.9585" stroke="#B6C2DA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="mtFilter-dropdown-menu">
+                                            <div class="mtFilter-dropdown-menu-item active" data-value="По дате создания">
+                                                <span class="mtFilter-dropdown-menu-item__icon">
+                                                    <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.08008 5.11892L4.28418 8.32298L11.1778 1.62354" stroke="#FFA438" stroke-width="1.66588" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                                <span class="mtFilter-dropdown-menu-item__value">
+                                                    По дате создания
+                                                </span>
+                                            </div>
+
+                                            <div class="mtFilter-dropdown-menu-item" data-value="По убыванию зарплат">
+                                                <span class="mtFilter-dropdown-menu-item__icon">
+                                                    <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.08008 5.11892L4.28418 8.32298L11.1778 1.62354" stroke="#FFA438" stroke-width="1.66588" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                                <span class="mtFilter-dropdown-menu-item__value">
+                                                    По убыванию зарплат
+                                                </span>
+                                            </div>
+
+                                            <div class="mtFilter-dropdown-menu-item" data-value="По возрастанию зарплат">
+                                                <span class="mtFilter-dropdown-menu-item__icon">
+                                                    <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.08008 5.11892L4.28418 8.32298L11.1778 1.62354" stroke="#FFA438" stroke-width="1.66588" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                                <span class="mtFilter-dropdown-menu-item__value">
+                                                    По возрастанию зарплат
+                                                </span>
+                                            </div>
+
+                                            <div class="mtFilter-dropdown-menu-item" data-value="По соответствию">
+                                                <span class="mtFilter-dropdown-menu-item__icon">
+                                                    <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.08008 5.11892L4.28418 8.32298L11.1778 1.62354" stroke="#FFA438" stroke-width="1.66588" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                                <span class="mtFilter-dropdown-menu-item__value">
+                                                    По соответствию
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab tab-active">
+                            <!-- <div class="tab-placeholder">
+                                <div class="message message--blue">
+                                    <span class="message__icon"></span>
+                                    <p class="message__text text-s14-h20-w400">Вы ещё не разместили ни одной вакансии</p>
+                                </div>
+
+                                <div class="create-vacancy">
+                                    <div class="create-vacancy-main">
+                                        <div class="create-vacancy-main__title text-s18-h22-w500">Разместите вакансию</div>
+
+                                        <div class="create-vacancy-main__description text-s14-h20-w400">Опубликуйте вакансию у нас на сайте и вскоре вы получите первые резюме от будущих сотрудников. Вы также можете загрузить уже опубликованную вами вакансию с сайта hh.ru</div>
+
+                                        <div class="create-vacancy-main__buttons text-s14-h20-w500">
+                                            <a href="#" class="button orange">Новая вакансия</a>
+                                            <a href="#" class="button orange--stroke">
+                                                <span class="button__icon">
+                                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M7.16602 9.16648C7.45232 9.54923 7.81759 9.86594 8.23705 10.0951C8.65651 10.3243 9.12035 10.4606 9.59712 10.4947C10.0739 10.5288 10.5524 10.4601 11.0002 10.293C11.4481 10.1259 11.8548 9.86453 12.1927 9.52648L14.1927 7.52648C14.7999 6.89781 15.1359 6.0558 15.1283 5.18181C15.1207 4.30782 14.7701 3.47178 14.1521 2.85375C13.5341 2.23573 12.698 1.88516 11.824 1.87757C10.95 1.86997 10.108 2.20595 9.47935 2.81315L8.33268 3.95315" stroke="#FFA438" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M9.83347 7.83332C9.54716 7.45057 9.18189 7.13387 8.76243 6.90469C8.34297 6.67552 7.87913 6.53924 7.40237 6.5051C6.9256 6.47095 6.44707 6.53974 5.99924 6.7068C5.5514 6.87386 5.14472 7.13527 4.8068 7.47332L2.8068 9.47332C2.19961 10.102 1.86363 10.944 1.87122 11.818C1.87881 12.692 2.22938 13.528 2.8474 14.146C3.46543 14.7641 4.30147 15.1146 5.17546 15.1222C6.04945 15.1298 6.89146 14.7938 7.52013 14.1867L8.66013 13.0467" stroke="#FFA438" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                                Скопировать с hh.ru
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div> -->
+
+                            <div class="item item--active" data-id="1">
+                                <div class="item__image">
+                                    <label class="item-checkbox">
+                                        <input type="checkbox" class="item-checkbox__input" />
+                                        <span class="item-checkbox__fake"></span>
+                                    </label>
+                                    <img src="https://cdn.mos.cms.futurecdn.net/7PnHfuU8RNxFiGRGL3h9fQ.jpg" alt="" />
+                                </div>
+                                <div class="item-main">
+                                    <div class="item-main__info">
+                                        <div class="info-header">
+                                            <div class="info-header__title text-s18-h22-w400">Менеджер по реализации проекта по переходу на 1С:ERP</div>
+                                            <div class="info-header__cost text-s16-h22-w600">50 900 ₽</div>
+                                        </div>
+                                        <div class="info-body">
+                                            <div class="info-body-item text-s12-h14-w400">Осталось 20 дней</div>
+                                            <div class="info-body-item text-s12-h14-w400">Санкт-Петербург, ст. м. Маяковская</div>
+                                            <div class="info-body-item text-s12-h14-w400">Обновлено: <b>2 марта в 06:31</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Видимость: <b>открытая</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Тип публикации: <b>бесплатно</b></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-main__stats">
+                                        <div class="counters">
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__otkliki.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Отклики</span>
+                                                <span class="count text-s12-h14-w500">3<span class="count--new" id="counter-responses">+7</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__invite.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Приглашены</span>
+                                                <span class="count text-s12-h14-w500">87<span class="count--new" id="counter-invites">+21</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__view.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Просмотры</span>
+                                                <span class="count text-s12-h14-w500">761<span class="count--new" id="counter-views">+659</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__fit.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Подходят</span>
+                                                <span class="count text-s12-h14-w500">9348<span class="count--new" id="counter-fits">+1234</span></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <div class="bar">
+                                                <div class="bar-line">
+                                                    <div class="bar-line__inner"></div>
+                                                </div>
+                                                <div class="bar__percent text-s12-h14-w500">76%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item__actions">
+                                    <div class="actions">
+                                        <div class="actions__item action-up">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Продвинуть</div>
+                                        </div>
+
+                                        <div class="actions__item action-edit">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Редактировать</div>
+                                        </div>
+
+                                        <div class="actions__item action-close">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Снять с публикации</div>
+                                        </div>
+
+                                        <div class="actions__item action-more">
+                                            <div class="icon"></div>
+
+                                            <div class="more-dropdown">
+                                                <div class="more-dropdown__item">Изменить видимость</div>
+                                                <div class="more-dropdown__item">Скачать</div>
+                                                <div class="more-dropdown__item">Снять с публикации</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="item item--active" data-id="2">
+                                <div class="item__image">
+                                    <div class="item-status">
+                                        На модерации
+                                    </div>
+                                    <label class="item-checkbox">
+                                        <input type="checkbox" class="item-checkbox__input" />
+                                        <span class="item-checkbox__fake"></span>
+                                    </label>
+                                    <img src="https://cdn.mos.cms.futurecdn.net/7PnHfuU8RNxFiGRGL3h9fQ.jpg" alt="" />
+                                </div>
+                                <div class="item-main">
+                                    <div class="item-main__info">
+                                        <div class="info-header">
+                                            <div class="info-header__title text-s18-h22-w400">Художник</div>
+                                            <div class="info-header__cost text-s16-h22-w600">50 900 ₽</div>
+                                        </div>
+                                        <div class="info-body">
+                                            <div class="info-body-item text-s12-h14-w400">Осталось 20 дней</div>
+                                            <div class="info-body-item text-s12-h14-w400">Санкт-Петербург, ст. м. Маяковская</div>
+                                            <div class="info-body-item text-s12-h14-w400">Обновлено: <b>2 марта в 06:31</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Видимость: <b>открытая</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Тип публикации: <b>бесплатно</b></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-main__stats">
+                                        <div class="counters">
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__otkliki.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Отклики</span>
+                                                <span class="count text-s12-h14-w500">3<span class="count--new" id="counter-responses">+7</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__invite.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Приглашены</span>
+                                                <span class="count text-s12-h14-w500">87<span class="count--new" id="counter-invites">+21</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__view.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Просмотры</span>
+                                                <span class="count text-s12-h14-w500">761<span class="count--new" id="counter-views">+659</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__fit.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Подходят</span>
+                                                <span class="count text-s12-h14-w500">9348<span class="count--new" id="counter-fits">+1234</span></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <div class="bar">
+                                                <div class="bar-line">
+                                                    <div class="bar-line__inner"></div>
+                                                </div>
+                                                <div class="bar__percent text-s12-h14-w500">23%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item__actions">
+                                    <div class="actions">
+                                        <div class="actions__item action-up">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Продвинуть</div>
+                                        </div>
+
+                                        <div class="actions__item action-edit">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Редактировать</div>
+                                        </div>
+
+                                        <div class="actions__item action-close">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Снять с публикации</div>
+                                        </div>
+
+                                        <div class="actions__item action-more">
+                                            <div class="icon"></div>
+
+                                            <div class="more-dropdown">
+                                                <div class="more-dropdown__item">Изменить видимость</div>
+                                                <div class="more-dropdown__item">Скачать</div>
+                                                <div class="more-dropdown__item">Снять с публикации</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="item item--active" data-id="3">
+                                <div class="item__image">
+                                    <div class="item-status">
+                                        Отклонено
+                                    </div>
+                                    <label class="item-checkbox">
+                                        <input type="checkbox" class="item-checkbox__input" />
+                                        <span class="item-checkbox__fake"></span>
+                                    </label>
+                                    <img src="https://cdn.mos.cms.futurecdn.net/7PnHfuU8RNxFiGRGL3h9fQ.jpg" alt="" />
+                                </div>
+                                <div class="item-main">
+                                    <div class="item-main__info">
+                                        <div class="info-header">
+                                            <div class="info-header__title text-s18-h22-w400">Художник</div>
+                                            <div class="info-header__cost text-s16-h22-w600">50 900 ₽</div>
+                                        </div>
+                                        <div class="info-body">
+                                            <div class="info-body-item text-s12-h14-w400">Осталось 20 дней</div>
+                                            <div class="info-body-item text-s12-h14-w400">Санкт-Петербург, ст. м. Маяковская</div>
+                                            <div class="info-body-item text-s12-h14-w400">Обновлено: <b>2 марта в 06:31</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Видимость: <b>открытая</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Тип публикации: <b>бесплатно</b></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-main__stats">
+                                        <div class="counters">
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__otkliki.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Отклики</span>
+                                                <span class="count text-s12-h14-w500">3<span class="count--new" id="counter-responses">+7</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__invite.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Приглашены</span>
+                                                <span class="count text-s12-h14-w500">87<span class="count--new" id="counter-invites">+21</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__view.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Просмотры</span>
+                                                <span class="count text-s12-h14-w500">761<span class="count--new" id="counter-views">+659</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__fit.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Подходят</span>
+                                                <span class="count text-s12-h14-w500">9348<span class="count--new" id="counter-fits">+1234</span></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <div class="bar">
+                                                <div class="bar-line">
+                                                    <div class="bar-line__inner"></div>
+                                                </div>
+                                                <div class="bar__percent text-s12-h14-w500">33%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item__actions">
+                                    <div class="actions">
+                                        <div class="actions__item action-up">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Продвинуть</div>
+                                        </div>
+
+                                        <div class="actions__item action-edit">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Редактировать</div>
+                                        </div>
+
+                                        <div class="actions__item action-close">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Снять с публикации</div>
+                                        </div>
+
+                                        <div class="actions__item action-more">
+                                            <div class="icon"></div>
+
+                                            <div class="more-dropdown">
+                                                <div class="more-dropdown__item">Изменить видимость</div>
+                                                <div class="more-dropdown__item">Скачать</div>
+                                                <div class="more-dropdown__item">Снять с публикации</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab tab-wait">
+                            <!--  -->
+                            <div class="item item--wait" data-id="21">
+                                <div class="item__image">
+                                    <label class="item-checkbox">
+                                        <input type="checkbox" class="item-checkbox__input" />
+                                        <span class="item-checkbox__fake"></span>
+                                    </label>
+                                    <img src="https://cdn.mos.cms.futurecdn.net/7PnHfuU8RNxFiGRGL3h9fQ.jpg" alt="" />
+                                </div>
+                                <div class="item-main">
+                                    <div class="item-main__info">
+                                        <div class="info-header">
+                                            <div class="info-header__title text-s18-h22-w400">Художник ждет действий</div>
+                                            <div class="info-header__cost text-s16-h22-w600">50 900 ₽</div>
+                                        </div>
+                                        <div class="info-body">
+                                            <div class="info-body-item text-s12-h14-w400">Санкт-Петербург, ст. м. Маяковская</div>
+                                            <div class="info-body-item text-s12-h14-w400">Истёк срок размещения</div>
+                                            <div class="info-body-item text-s12-h14-w400">Видимость: <b>всем зарегистрированным</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Тип публикации: <b>бесплатно</b></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-main__stats">
+                                        <div class="counters">
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__otkliki.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Отклики</span>
+                                                <span class="count text-s12-h14-w500">3<span class="count--new" id="counter-responses">+7</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__invite.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Приглашены</span>
+                                                <span class="count text-s12-h14-w500">87<span class="count--new" id="counter-invites">+21</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__view.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Просмотры</span>
+                                                <span class="count text-s12-h14-w500">761<span class="count--new" id="counter-views">+659</span></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <div class="bar">
+                                                <div class="bar-line">
+                                                    <div class="bar-line__inner"></div>
+                                                </div>
+                                                <div class="bar__percent text-s12-h14-w500">33%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item__actions">
+                                    <div class="actions">
+                                        <div class="actions__item action-post">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Разместить повторно</div>
+                                        </div>
+
+                                        <div class="actions__item action-edit">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Редактировать</div>
+                                        </div>
+
+                                        <div class="actions__item action-archive">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">В архив</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="item item--wait" data-id="22">
+                                <div class="item__image">
+                                    <label class="item-checkbox">
+                                        <input type="checkbox" class="item-checkbox__input" />
+                                        <span class="item-checkbox__fake"></span>
+                                    </label>
+                                    <img src="https://cdn.mos.cms.futurecdn.net/7PnHfuU8RNxFiGRGL3h9fQ.jpg" alt="" />
+                                </div>
+                                <div class="item-main">
+                                    <div class="item-main__info">
+                                        <div class="info-header">
+                                            <div class="info-header__title text-s18-h22-w400">Художник ждет действий</div>
+                                            <div class="info-header__cost text-s16-h22-w600">50 900 ₽</div>
+                                        </div>
+                                        <div class="info-body">
+                                            <div class="info-body-item text-s12-h14-w400">Санкт-Петербург, ст. м. Маяковская</div>
+                                            <div class="info-body-item text-s12-h14-w400">Истёк срок размещения</div>
+                                            <div class="info-body-item text-s12-h14-w400">Видимость: <b>всем зарегистрированным</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Тип публикации: <b>бесплатно</b></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-main__stats">
+                                        <div class="counters">
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__otkliki.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Отклики</span>
+                                                <span class="count text-s12-h14-w500">3<span class="count--new" id="counter-responses">+7</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__invite.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Приглашены</span>
+                                                <span class="count text-s12-h14-w500">87<span class="count--new" id="counter-invites">+21</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__view.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Просмотры</span>
+                                                <span class="count text-s12-h14-w500">761<span class="count--new" id="counter-views">+659</span></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <div class="bar">
+                                                <div class="bar-line">
+                                                    <div class="bar-line__inner"></div>
+                                                </div>
+                                                <div class="bar__percent text-s12-h14-w500">33%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item__actions">
+                                    <div class="actions">
+                                        <div class="actions__item action-post">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Разместить повторно</div>
+                                        </div>
+
+                                        <div class="actions__item action-edit">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Редактировать</div>
+                                        </div>
+
+                                        <div class="actions__item action-archive">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">В архив</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+
+                            <div class="item item--wait" data-id="23">
+                                <div class="item__image">
+                                    <label class="item-checkbox">
+                                        <input type="checkbox" class="item-checkbox__input" />
+                                        <span class="item-checkbox__fake"></span>
+                                    </label>
+                                    <img src="https://cdn.mos.cms.futurecdn.net/7PnHfuU8RNxFiGRGL3h9fQ.jpg" alt="" />
+                                </div>
+                                <div class="item-main">
+                                    <div class="item-main__info">
+                                        <div class="info-header">
+                                            <div class="info-header__title text-s18-h22-w400">Художник ждет действий</div>
+                                            <div class="info-header__cost text-s16-h22-w600">50 900 ₽</div>
+                                        </div>
+                                        <div class="info-body">
+                                            <div class="info-body-item text-s12-h14-w400">Санкт-Петербург, ст. м. Маяковская</div>
+                                            <div class="info-body-item text-s12-h14-w400">Истёк срок размещения</div>
+                                            <div class="info-body-item text-s12-h14-w400">Видимость: <b>всем зарегистрированным</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Тип публикации: <b>бесплатно</b></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-main__stats">
+                                        <div class="counters">
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__otkliki.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Отклики</span>
+                                                <span class="count text-s12-h14-w500">3<span class="count--new" id="counter-responses">+7</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__invite.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Приглашены</span>
+                                                <span class="count text-s12-h14-w500">87<span class="count--new" id="counter-invites">+21</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__view.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Просмотры</span>
+                                                <span class="count text-s12-h14-w500">761<span class="count--new" id="counter-views">+659</span></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <div class="bar">
+                                                <div class="bar-line">
+                                                    <div class="bar-line__inner"></div>
+                                                </div>
+                                                <div class="bar__percent text-s12-h14-w500">33%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item__actions">
+                                    <div class="actions">
+                                        <div class="actions__item action-post">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Разместить повторно</div>
+                                        </div>
+
+                                        <div class="actions__item action-edit">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Редактировать</div>
+                                        </div>
+
+                                        <div class="actions__item action-archive">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">В архив</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+
+                            <div class="item item--wait" data-id="24">
+                                <div class="item__image">
+                                    <label class="item-checkbox">
+                                        <input type="checkbox" class="item-checkbox__input" />
+                                        <span class="item-checkbox__fake"></span>
+                                    </label>
+                                    <img src="https://cdn.mos.cms.futurecdn.net/7PnHfuU8RNxFiGRGL3h9fQ.jpg" alt="" />
+                                </div>
+                                <div class="item-main">
+                                    <div class="item-main__info">
+                                        <div class="info-header">
+                                            <div class="info-header__title text-s18-h22-w400">Художник ждет действий</div>
+                                            <div class="info-header__cost text-s16-h22-w600">50 900 ₽</div>
+                                        </div>
+                                        <div class="info-body">
+                                            <div class="info-body-item text-s12-h14-w400">Санкт-Петербург, ст. м. Маяковская</div>
+                                            <div class="info-body-item text-s12-h14-w400">Истёк срок размещения</div>
+                                            <div class="info-body-item text-s12-h14-w400">Видимость: <b>всем зарегистрированным</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Тип публикации: <b>бесплатно</b></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-main__stats">
+                                        <div class="counters">
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__otkliki.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Отклики</span>
+                                                <span class="count text-s12-h14-w500">3<span class="count--new" id="counter-responses">+7</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__invite.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Приглашены</span>
+                                                <span class="count text-s12-h14-w500">87<span class="count--new" id="counter-invites">+21</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__view.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Просмотры</span>
+                                                <span class="count text-s12-h14-w500">761<span class="count--new" id="counter-views">+659</span></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <div class="bar">
+                                                <div class="bar-line">
+                                                    <div class="bar-line__inner"></div>
+                                                </div>
+                                                <div class="bar__percent text-s12-h14-w500">33%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item__actions">
+                                    <div class="actions">
+                                        <div class="actions__item action-post">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Разместить повторно</div>
+                                        </div>
+
+                                        <div class="actions__item action-edit">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Редактировать</div>
+                                        </div>
+
+                                        <div class="actions__item action-archive">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">В архив</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+
+                            <div class="item item--wait" data-id="25">
+                                <div class="item__image">
+                                    <label class="item-checkbox">
+                                        <input type="checkbox" class="item-checkbox__input" />
+                                        <span class="item-checkbox__fake"></span>
+                                    </label>
+                                    <img src="https://cdn.mos.cms.futurecdn.net/7PnHfuU8RNxFiGRGL3h9fQ.jpg" alt="" />
+                                </div>
+                                <div class="item-main">
+                                    <div class="item-main__info">
+                                        <div class="info-header">
+                                            <div class="info-header__title text-s18-h22-w400">Художник ждет действий</div>
+                                            <div class="info-header__cost text-s16-h22-w600">50 900 ₽</div>
+                                        </div>
+                                        <div class="info-body">
+                                            <div class="info-body-item text-s12-h14-w400">Санкт-Петербург, ст. м. Маяковская</div>
+                                            <div class="info-body-item text-s12-h14-w400">Истёк срок размещения</div>
+                                            <div class="info-body-item text-s12-h14-w400">Видимость: <b>всем зарегистрированным</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Тип публикации: <b>бесплатно</b></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-main__stats">
+                                        <div class="counters">
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__otkliki.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Отклики</span>
+                                                <span class="count text-s12-h14-w500">3<span class="count--new" id="counter-responses">+7</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__invite.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Приглашены</span>
+                                                <span class="count text-s12-h14-w500">87<span class="count--new" id="counter-invites">+21</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__view.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Просмотры</span>
+                                                <span class="count text-s12-h14-w500">761<span class="count--new" id="counter-views">+659</span></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <div class="bar">
+                                                <div class="bar-line">
+                                                    <div class="bar-line__inner"></div>
+                                                </div>
+                                                <div class="bar__percent text-s12-h14-w500">33%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item__actions">
+                                    <div class="actions">
+                                        <div class="actions__item action-post">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Разместить повторно</div>
+                                        </div>
+
+                                        <div class="actions__item action-edit">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Редактировать</div>
+                                        </div>
+
+                                        <div class="actions__item action-archive">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">В архив</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+
+                            <div class="item item--wait" data-id="26">
+                                <div class="item__image">
+                                    <label class="item-checkbox">
+                                        <input type="checkbox" class="item-checkbox__input" />
+                                        <span class="item-checkbox__fake"></span>
+                                    </label>
+                                    <img src="https://cdn.mos.cms.futurecdn.net/7PnHfuU8RNxFiGRGL3h9fQ.jpg" alt="" />
+                                </div>
+                                <div class="item-main">
+                                    <div class="item-main__info">
+                                        <div class="info-header">
+                                            <div class="info-header__title text-s18-h22-w400">Художник ждет действий</div>
+                                            <div class="info-header__cost text-s16-h22-w600">50 900 ₽</div>
+                                        </div>
+                                        <div class="info-body">
+                                            <div class="info-body-item text-s12-h14-w400">Санкт-Петербург, ст. м. Маяковская</div>
+                                            <div class="info-body-item text-s12-h14-w400">Истёк срок размещения</div>
+                                            <div class="info-body-item text-s12-h14-w400">Видимость: <b>всем зарегистрированным</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Тип публикации: <b>бесплатно</b></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-main__stats">
+                                        <div class="counters">
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__otkliki.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Отклики</span>
+                                                <span class="count text-s12-h14-w500">3<span class="count--new" id="counter-responses">+7</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__invite.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Приглашены</span>
+                                                <span class="count text-s12-h14-w500">87<span class="count--new" id="counter-invites">+21</span></span>
+                                            </div>
+
+                                            <div class="counters__item">
+                                                <span class="icon"><img src="img/item/counter__view.svg" alt="Отклики" /></span>
+                                                <span class="title text-s12-h14-w400">Просмотры</span>
+                                                <span class="count text-s12-h14-w500">761<span class="count--new" id="counter-views">+659</span></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress">
+                                            <div class="bar">
+                                                <div class="bar-line">
+                                                    <div class="bar-line__inner"></div>
+                                                </div>
+                                                <div class="bar__percent text-s12-h14-w500">33%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item__actions">
+                                    <div class="actions">
+                                        <div class="actions__item action-post">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Разместить повторно</div>
+                                        </div>
+
+                                        <div class="actions__item action-edit">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Редактировать</div>
+                                        </div>
+
+                                        <div class="actions__item action-archive">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">В архив</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                        </div>
+
+                        <div class="tab tab-archive">
+                            <div class="item item--wait" data-id="31">
+                                <div class="item__image">
+                                    <label class="item-checkbox">
+                                        <input type="checkbox" class="item-checkbox__input" />
+                                        <span class="item-checkbox__fake"></span>
+                                    </label>
+                                    <img src="https://cdn.mos.cms.futurecdn.net/7PnHfuU8RNxFiGRGL3h9fQ.jpg" alt="" />
+                                </div>
+                                <div class="item-main">
+                                    <div class="item-main__info">
+                                        <div class="info-header">
+                                            <div class="info-header__title text-s18-h22-w400">Художник в архиве</div>
+                                            <div class="info-header__cost text-s16-h22-w600">50 900 ₽</div>
+                                        </div>
+                                        <div class="info-body">
+                                            <div class="info-body-item text-s12-h14-w400">Осталось 20 дней</div>
+                                            <div class="info-body-item text-s12-h14-w400">Санкт-Петербург, ст. м. Маяковская</div>
+                                            <div class="info-body-item text-s12-h14-w400">Дата архивации: <b>2 марта в 08:47</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Видимость: <b>всем зарегистрированным</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Тип публикации: <b>бесплатно</b></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-main__stats"></div>
+                                </div>
+
+                                <div class="item__actions">
+                                    <div class="actions">
+                                        <div class="actions__item action-post">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Разместить повторно</div>
+                                        </div>
+
+                                        <div class="actions__item action-edit">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Редактировать</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                        </div>
+
+                        <div class="tab tab-draft">
+                            <div class="item item--wait" data-id="41">
+                                <div class="item__image">
+                                    <label class="item-checkbox">
+                                        <input type="checkbox" class="item-checkbox__input" />
+                                        <span class="item-checkbox__fake"></span>
+                                    </label>
+                                    <img src="https://cdn.mos.cms.futurecdn.net/7PnHfuU8RNxFiGRGL3h9fQ.jpg" alt="" />
+                                </div>
+                                <div class="item-main">
+                                    <div class="item-main__info">
+                                        <div class="info-header">
+                                            <div class="info-header__title text-s18-h22-w400">Художник в черновиках</div>
+                                            <div class="info-header__cost text-s16-h22-w600">50 900 ₽</div>
+                                        </div>
+                                        <div class="info-body">
+                                            <div class="info-body-item text-s12-h14-w400">Санкт-Петербург, ст. м. Маяковская</div>
+                                            <div class="info-body-item text-s12-h14-w400">Удалится: <b>2 марта в 08:47</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Видимость: <b>всем зарегистрированным</b></div>
+                                            <div class="info-body-item info-body-item--not-ready text-s12-h14-w400">Статус: <b>Не заполнена</b></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-main__stats"></div>
+                                </div>
+
+                                <div class="item__actions">
+                                    <div class="actions">
+                                        <div class="actions__item action-edit">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Редактировать</div>
+                                        </div>
+
+                                        <div class="actions__item action-delete">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Удалить</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="item item--wait" data-id="42">
+                                <div class="item__image">
+                                    <label class="item-checkbox">
+                                        <input type="checkbox" class="item-checkbox__input" />
+                                        <span class="item-checkbox__fake"></span>
+                                    </label>
+                                    <img src="https://cdn.mos.cms.futurecdn.net/7PnHfuU8RNxFiGRGL3h9fQ.jpg" alt="" />
+                                </div>
+                                <div class="item-main">
+                                    <div class="item-main__info">
+                                        <div class="info-header">
+                                            <div class="info-header__title text-s18-h22-w400">Художник в черновиках</div>
+                                            <div class="info-header__cost text-s16-h22-w600">50 900 ₽</div>
+                                        </div>
+                                        <div class="info-body">
+                                            <div class="info-body-item text-s12-h14-w400">Санкт-Петербург, ст. м. Маяковская</div>
+                                            <div class="info-body-item text-s12-h14-w400">Удалится: <b>2 марта в 08:47</b></div>
+                                            <div class="info-body-item text-s12-h14-w400">Видимость: <b>всем зарегистрированным</b></div>
+                                            <div class="info-body-item info-body-item--ready text-s12-h14-w400">Статус: <b>Готова к публикации</b></div>
+                                        </div>
+                                    </div>
+                                    <div class="item-main__stats"></div>
+                                </div>
+
+                                <div class="item__actions">
+                                    <div class="actions">
+                                        <div class="actions__item action-edit">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Редактировать</div>
+                                        </div>
+
+                                        <div class="actions__item action-delete">
+                                            <div class="icon"></div>
+                                            <div class="tooltip">Удалить</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="mtModal-overlay modal-close-trigger" data-modal=""></div>
+
+        <div class="mtModal mtModal-archive">
+            <div class="mtModal-inner">
+                <div class="mtModal-inner-head">
+                    <div class="mtModal-inner-head__title text-s24-h32-w500">Укажите причину архивации вакансии</div>
+                    <div class="mtModal-inner-head__description text-s14-h20-w400">Любая вакансия из архива будет доступна для повторного размещения в качестве новой публикации</div>
+                </div>
+
+                <div class="mtModal-inner-body">
+                    <form class="mtModal-archive-form">
+                        <!--  -->
+                        <label class="mtModal-archive-form-item">
+                            <input type="radio" name="reason" class="mtModal-archive-form-item__hidden" checked />
+                            <span class="mtModal-archive-form-item-visible">
+                                <div class="mtModal-archive-form-item-visible__input radio"></div>
+                                <div class="mtModal-archive-form-item-visible__title">Нашли сотрудника здесь, на at-work.pro</div>
+                            </span>
+                        </label>
+                        <!--  -->
+                        <label class="mtModal-archive-form-item">
+                            <input type="radio" name="reason" class="mtModal-archive-form-item__hidden" />
+                            <span class="mtModal-archive-form-item-visible">
+                                <div class="mtModal-archive-form-item-visible__input radio"></div>
+                                <div class="mtModal-archive-form-item-visible__title">Нашли сотрудника на другом ресурсе</div>
+                            </span>
+                        </label>
+                        <!--  -->
+                        <label class="mtModal-archive-form-item">
+                            <input type="radio" name="reason" class="mtModal-archive-form-item__hidden" />
+                            <span class="mtModal-archive-form-item-visible">
+                                <div class="mtModal-archive-form-item-visible__input radio"></div>
+                                <div class="mtModal-archive-form-item-visible__title">Другая причина</div>
+                            </span>
+                        </label>
+                        <!--  -->
+                    </form>
+                </div>
+                <div class="mtModal-inner-actions">
+                    <button class="mtModal-inner-actions__button button transparent text-s14-h20-w500 modal-close-trigger" data-modal="archive">Отмена</button>
+                    <button class="mtModal-inner-actions__button button orange text-s14-h20-w500">Отправить в архив</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mtModal mtModal-archive-self">
+            <div class="mtModal-inner">
+                <div class="mtModal-inner-head">
+                    <div class="mtModal-inner-head__title text-s24-h32-w500">Укажите причину архивации вакансии</div>
+                    <div class="mtModal-inner-head__description text-s14-h20-w400">Любая вакансия из архива будет доступна для повторного размещения в качестве новой публикации</div>
+                </div>
+
+                <div class="mtModal-inner-body">
+                    <form class="mtModal-form">
+                        <label class="mtModal-form-item">
+                            <input class="mtModal-form-item__hidden" type="radio" name="chose-reason-self" />
+                            <div class="mtModal-form-item__visible radio"></div>
+                            <div class="mtModal-form-item-info">
+                                <p class="mtModal-form-item-info__title text-s16-h22-w400">Нашли сотрудника здесь, на at-work.pro</p>
+                            </div>
+                        </label>
+                        <!--  -->
+                        <label class="mtModal-form-item">
+                            <input class="mtModal-form-item__hidden" type="radio" name="chose-reason-self" />
+                            <div class="mtModal-form-item__visible radio"></div>
+                            <div class="mtModal-form-item-info">
+                                <p class="mtModal-form-item-info__title text-s16-h22-w400">Нашли сотрудника на другом ресурсе</p>
+                            </div>
+                        </label>
+                        <!--  -->
+                        <label class="mtModal-form-item">
+                            <input class="mtModal-form-item__hidden" type="radio" name="chose-reason-self" />
+                            <div class="mtModal-form-item__visible radio"></div>
+                            <div class="mtModal-form-item-info">
+                                <p class="mtModal-form-item-info__title text-s16-h22-w400">Другая причина</p>
+                            </div>
+                        </label>
+                        <!--  -->
+                    </form>
+                </div>
+                <div class="mtModal-inner-actions">
+                    <button class="mtModal-inner-actions__button button transparent text-s14-h20-w500 modal-close-trigger" data-modal="archive">Отмена</button>
+                    <button class="mtModal-inner-actions__button button orange text-s14-h20-w500">Отправить в архив</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mtModal mtModal-draft">
+            <div class="mtModal-inner">
+                <div class="mtModal-inner-head">
+                    <div class="mtModal-inner-head__title text-s24-h32-w500">Вакансия из черновика</div>
+                </div>
+
+                <div class="mtModal-inner-body">
+                    <form class="mtModal-form">
+                        <label class="mtModal-form-item">
+                            <input class="mtModal-form-item__hidden" type="radio" name="chose-draft" />
+                            <div class="mtModal-form-item__visible radio"></div>
+                            <div class="mtModal-form-item-info">
+                                <p class="mtModal-form-item-info__title text-s16-h22-w400">Грузчик</p>
+                                <p class="mtModal-form-item-info__date text-s12-h14-w400">сохранена сегодня в 15:23</p>
+                            </div>
+                        </label>
+                        <!--  -->
+                        <label class="mtModal-form-item">
+                            <input class="mtModal-form-item__hidden" type="radio" name="chose-draft" />
+                            <div class="mtModal-form-item__visible radio"></div>
+                            <div class="mtModal-form-item-info">
+                                <p class="mtModal-form-item-info__title text-s16-h22-w400">Оператор станка</p>
+                                <p class="mtModal-form-item-info__date text-s12-h14-w400">сохранена сегодня в 15:233</p>
+                            </div>
+                        </label>
+                        <!--  -->
+                    </form>
+                </div>
+                <div class="mtModal-inner-actions">
+                    <button class="mtModal-inner-actions__button button transparent text-s14-h20-w500 modal-close-trigger" data-modal="draft">Отмена</button>
+                    <button class="mtModal-inner-actions__button button orange text-s14-h20-w500">Выбрать</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mtModal mtModal-template">
+            <div class="mtModal-inner">
+                <div class="mtModal-inner-head">
+                    <div class="mtModal-inner-head__title text-s24-h32-w500">Вакансия из шаблона</div>
+                </div>
+
+                <div class="mtModal-inner-body">
+                    <form class="mtModal-form">
+                        <label class="mtModal-form-item">
+                            <input class="mtModal-form-item__hidden" type="radio" name="chose-template" />
+                            <div class="mtModal-form-item__visible radio"></div>
+                            <div class="mtModal-form-item-info">
+                                <p class="mtModal-form-item-info__title text-s16-h22-w400">шаблон Дмитрия</p>
+                            </div>
+                        </label>
+                        <!--  -->
+                        <label class="mtModal-form-item">
+                            <input class="mtModal-form-item__hidden" type="radio" name="chose-template" />
+                            <div class="mtModal-form-item__visible radio"></div>
+                            <div class="mtModal-form-item-info">
+                                <p class="mtModal-form-item-info__title text-s16-h22-w400">тестировщик</p>
+                            </div>
+                        </label>
+                        <!--  -->
+
+                        <a href="#" class="mtModal-form-item mtModal-template-item--create text-s14-h20-w500">
+                            + Создать новый шаблон
+                        </a>
+                    </form>
+                </div>
+                <div class="mtModal-inner-actions">
+                    <button class="mtModal-inner-actions__button button transparent text-s14-h20-w500 modal-close-trigger" data-modal="template">Отмена</button>
+                    <button class="mtModal-inner-actions__button button orange text-s14-h20-w500">Выбрать</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="mtModal mtModal-transfer">
+            <div class="mtModal-inner mtModal-transfer-placeholder">
+                <div class="mtModal-inner-body">
+                    <div class="mtModal-transfer-placeholder-image">
+                        <div class="mtModal-transfer-placeholder-image__icon">
+                            <img src="img/transfer-placeholder.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="mtModal-transfer-placeholder-title text-s18-h22-w500">Передать некому :(</div>
+                    <div class="mtModal-transfer-placeholder-description text-s14-h20-w400">В компании ещё нет других сотрудников</div>
+                </div>
+                <div class="mtModal-inner-actions">
+                    <button class="mtModal-inner-actions__button button orange text-s14-h20-w500">Добавить сотрудника</button>
+                </div>
+            </div>
+
+            <!-- <div class="mtModal-inner">
+                <div class="mtModal-inner-head">
+                    <div class="mtModal-inner-head__title text-s24-h32-w500" >Передать вакансии</div>
+                </div>
+
+                <div class="mtModal-inner-body">
+                    <form class="mtModal-form">
+                        <div class="mtModal-form-search text-s14-h20-w400">
+                            <input class="mtModal-form-search__input" type="search" placeholder="Начните вводить имя менеджера" />
+                            <div class="mtModal-form-search__icon">
+                                <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.9999 11.1356L8.85977 7.99582M8.85977 7.99582C10.4883 6.3671 10.4883 3.7168 8.85977 2.08808C8.07102 1.29935 7.02183 0.864746 5.90607 0.864746C4.79032 0.864746 3.74135 1.29935 2.95237 2.08832C2.16315 2.87705 1.72877 3.92599 1.729 5.04195C1.729 6.15768 2.16362 7.20662 2.95237 7.99559C3.74135 8.78455 4.79032 9.21916 5.90607 9.21916C7.02183 9.21916 8.07079 8.78478 8.85977 7.99582Z" stroke="#98A1B3" stroke-width="1.66578" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="mtModal-form-names">
+                            <label class="mtModal-form-item">
+                                <input class="mtModal-form-item__hidden" type="radio" name="chose-transfer" />
+                                <div class="mtModal-form-item__visible radio"></div>
+                                <div class="mtModal-form-item-info">
+                                    <p class="mtModal-form-item-info__title text-s16-h22-w400">Александров Дмитрий</p>
+                                </div>
+                            </label>
+                            
+                            <label class="mtModal-form-item">
+                                <input class="mtModal-form-item__hidden" type="radio" name="chose-transfer" />
+                                <div class="mtModal-form-item__visible radio"></div>
+                                <div class="mtModal-form-item-info">
+                                    <p class="mtModal-form-item-info__title text-s16-h22-w400">Васильева Елена</p>
+                                </div>
+                            </label>
+                            
+                            <label class="mtModal-form-item">
+                                <input class="mtModal-form-item__hidden" type="radio" name="chose-transfer" />
+                                <div class="mtModal-form-item__visible radio"></div>
+                                <div class="mtModal-form-item-info">
+                                    <p class="mtModal-form-item-info__title text-s16-h22-w400">Иванов Иван</p>
+                                </div>
+                            </label>
+                           
+                            
+                        </div>
+                    </form>
+                </div>
+                <div class="mtModal-inner-actions">
+                    <button class="mtModal-inner-actions__button button transparent text-s14-h20-w500 modal-close-trigger" data-modal="transfer">Отмена</button>
+                    <button class="mtModal-inner-actions__button button orange text-s14-h20-w500">Передать</button>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+        <script src="js/jquery.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/slider-menu.js"></script>
+    </body>
+</html>
